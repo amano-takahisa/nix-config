@@ -22,6 +22,15 @@ Change default user to `takahisa`.
 {
   ...
   wsl.defaultUser = "takahisa";
+  users.users.takahisa = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" ];
+    shell = pkgs.fish;
+  };
+  environment.systemPackages = with pkgs; [
+    fish
+  ];
+  programs.fish.enable = true;
   ...
 }
 ```
