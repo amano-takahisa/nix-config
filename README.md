@@ -68,5 +68,5 @@ exit
 Apply configs with following command
 
 ```bash
-nix run nix-config#homeConfigurations."takahisa".activationPackage
+nix run ./nix-config#homeConfigurations."takahisa".activationPackage
 ```
