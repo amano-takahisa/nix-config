@@ -11,7 +11,6 @@
     bat
     eza
     fd
-    fish
     fzf
     htop
     less
@@ -58,7 +57,6 @@
     defaultEditor = true;
   };
   programs.git.enable = true;
-  programs.zsh.enable = true;
-  programs.tmux.enable = true;
+  programs.fish.enable = true;
 }
 
