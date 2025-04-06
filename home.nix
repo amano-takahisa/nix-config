@@ -23,7 +23,6 @@
 
     ##### Neovim #####
     eslint
-    neovim
     nodePackages.prettier
     python3
     python3Packages.pynvim
@@ -39,7 +38,6 @@
 
     ##### git #####
     gh
-    git
     lazygit
 
     ##### misc #####
