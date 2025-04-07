@@ -77,7 +77,7 @@ exit
 Apply configs with following command
 
 ```bash
-nix run ./nix-config#homeConfigurations."takahisa".activationPackage
+nix run github:nix-community/home-manager -- --flake .#takahisa switch
 ```
 
 Options of packages managed by home-manager can be found in https://home-manager-options.extranix.com/
