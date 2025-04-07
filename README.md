@@ -79,3 +79,5 @@ Apply configs with following command
 ```bash
 nix run ./nix-config#homeConfigurations."takahisa".activationPackage
 ```
+
+Options of packages managed by home-manager can be found in https://home-manager-options.extranix.com/
