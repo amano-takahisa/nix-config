@@ -40,7 +40,6 @@
     lazygit
 
     ##### misc #####
-    tmux
     tree
     unzip
     wl-clipboard
@@ -52,10 +51,6 @@
     font-awesome
   ];
 
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
   programs.git.enable = true;
   programs.fish.enable = true;
 }
