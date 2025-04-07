@@ -1,3 +1,4 @@
+vim.g.python3_host_prog = "/home/takahisa/Documents/venvs/neovim/.pixi/envs/default/bin/python"
 local options = {
         -- UI left
         number = true,
@@ -34,16 +35,15 @@ local options = {
         smartcase = true,
 
         -- indent, tabs
-        expandtab = true,
         smartindent = true,
         -- smarttab = true,
+        expandtab = true,
         -- shiftwidth = 4,
         -- tabstop = 4,
 
         -- backup, swap
         swapfile = true,
         undofile = true,
-
         -- do not change inode
         backupcopy = "yes",
 

@@ -1,5 +1,9 @@
 { config, pkgs, ... }:
 
+let
+  lib = config.lib;
+in
+
 {
   home.username = "takahisa";
   home.homeDirectory = "/home/takahisa";

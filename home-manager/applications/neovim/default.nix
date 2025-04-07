@@ -1,27 +1,14 @@
-{ config, pkgs, lib, sources, ... }:
+{ config, pkgs, ... }:
+
 let
-  initLua = builtins.readFile ./init.lua;
-  optionsLua = builtins.readFile ./options.lua;
-  keymapsLua = builtins.readFile ./keymaps.lua;
-
-  pluginFiles = builtins.attrNames (builtins.readDir ./plugins);
-  pluginLua = lib.concatMapStringsSep "\n\n" (file:
-    builtins.readFile (./plugins + "/${file}")
-  ) pluginFiles;
+  lib = config.lib;
 in
-{
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-    plugins = with pkgs.vimPlugins; [
-      neo-tree-nvim
-    ];
 
-    extraLuaConfig = ''
-      ${initLua}
-      ${optionsLua}
-      ${keymapsLua}
-      ${pluginLua}
-    '';
+{
+  home.packages = [pkgs.neovim];
+  home.file = {
+  ".config/nvim" = {
+      source = lib.file.mkOutOfStoreSymlink /home/takahisa/nix-config/nvim;
+    };
   };
 }
