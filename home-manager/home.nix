@@ -16,6 +16,7 @@ in
     eza
     fd
     fzf
+    gcc
     htop
     less
     libsixel
