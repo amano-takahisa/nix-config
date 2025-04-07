@@ -23,9 +23,7 @@
       homeConfigurations.takahisa = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
 
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
-        modules = [ ./home.nix ]
+        modules = [ ./home-manager/home.nix ]
 	++ applications;
 
         # Optionally use extraSpecialArgs
