@@ -20,6 +20,7 @@ in
     htop
     less
     libsixel
+    gnumake
     nodejs
     sshfs
     which
