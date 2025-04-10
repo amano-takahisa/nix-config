@@ -77,7 +77,12 @@ exit
 Apply configs with following command
 
 ```bash
-nix run github:nix-community/home-manager -- --flake .#takahisa switch
+# Environment in wsl
+nix run github:nix-community/home-manager -- --flake .#wsl switch
+
+# Environment for NixOS for a Let's note
+nix run github:nix-community/home-manager -- --flake .#letsnote switch
+
 ```
 
 Options of packages managed by home-manager can be found in https://home-manager-options.extranix.com/
