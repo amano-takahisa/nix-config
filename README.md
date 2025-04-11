@@ -86,3 +86,12 @@ nix run github:nix-community/home-manager -- --flake .#letsnote switch
 ```
 
 Options of packages managed by home-manager can be found in https://home-manager-options.extranix.com/
+
+## Network connection
+
+If old laptop does not support 5 GHz wifi and can't connect wifi, try to
+disable 5 GHz band from Network Connection Editor.
+
+```console
+nm-connection-editor
+```
