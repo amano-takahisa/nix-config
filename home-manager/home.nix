@@ -59,5 +59,7 @@ in
 
   programs.git.enable = true;
   programs.fish.enable = true;
+
+  nixpkgs.config.allowUnfree = true;
 }
 
