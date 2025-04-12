@@ -56,10 +56,6 @@ in
     hackgen-nf-font
     font-awesome
   ];
-
-  programs.git.enable = true;
-  programs.fish.enable = true;
-
   nixpkgs.config.allowUnfree = true;
 }
 
