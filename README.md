@@ -82,7 +82,12 @@ nix run github:nix-community/home-manager -- --flake .#wsl switch
 
 # Environment for NixOS for a Let's note
 nix run github:nix-community/home-manager -- --flake .#letsnote switch
+```
 
+Once you have run the above command, you can use the following command to apply the changes.
+
+```bash
+home-manager --flake .#wsl switch
 ```
 
 Options of packages managed by home-manager can be found in https://home-manager-options.extranix.com/

@@ -11,6 +11,9 @@ in
   home.stateVersion = "24.11";
 
   home.packages = with pkgs; [
+    ##### NixOS modules #####
+    home-manager
+
     ##### basic tool #####
     bat
     eza
