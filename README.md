@@ -11,8 +11,11 @@ In the Windows start menu, search for "NixOS" and start it.
 
 Enable Flakes
 
+
+
 ```console
-$ sudo nix-shell -p neovim
+$ sudo nix-shell -p neovim wget
+# wget -O /etc/nixos/configuration.nix https://raw.githubusercontent.com/amano-takahisa/nix-config/refs/heads/main/configuration.nix
 # nvim /etc/nixos/configuration.nix
 ```
 
