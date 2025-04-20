@@ -12,43 +12,9 @@ In the Windows start menu, search for "NixOS" and start it.
 Enable Flakes
 
 
-
 ```console
-$ sudo nix-shell -p neovim wget
+$ sudo nix-shell -p wget
 # wget -O /etc/nixos/configuration.nix https://raw.githubusercontent.com/amano-takahisa/nix-config/refs/heads/main/configuration.nix
-# nvim /etc/nixos/configuration.nix
-```
-
-Change default user to `takahisa`.
-
-```nix
-{
-  ...
-  wsl.defaultUser = "takahisa";
-  users.users.takahisa = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" ];
-    shell = pkgs.fish;
-  };
-  environment.systemPackages = with pkgs; [
-    fish
-  ];
-  programs.fish.enable = true;
-  ...
-}
-```
-
-Add the following line to the file.
-
-```nix
-{
-  ...
-  nix = {
-    settings = {
-      experimental-features = ["nix-command" "flakes"];
-    };
-  };
-}
 ```
 
 Then, run the following command to apply the changes.
@@ -91,9 +57,19 @@ Once you have run the above command, you can use the following command to apply 
 
 ```bash
 home-manager --flake .#wsl switch
+home-manager --flake .#flake switch
 ```
 
 Options of packages managed by home-manager can be found in https://home-manager-options.extranix.com/
+
+## Japanese Input with MOZC
+
+System Settings -> Keyboard -> Virtual Keyboard -> Fcitx 5 Wayland Launcher
+System Settings -> Input Method -> Add mozc, Set as follows:
+
+- Initial Mode: Direct
+- Mozc settings -> General -> Keymap Style: Load `misc/mozc_keymap.txt` in this repository.
+
 
 ## Network connection
 
