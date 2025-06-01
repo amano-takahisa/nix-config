@@ -57,7 +57,14 @@ Once you have run the above command, you can use the following command to apply 
 
 ```bash
 home-manager --flake .#wsl switch
-home-manager --flake .#flake switch
+home-manager --flake .#letsnote switch
+```
+
+To update packages, you can use the following command:
+
+```bash
+nix flake update
+home-manager --flake .#wsl switch
 ```
 
 Options of packages managed by home-manager can be found in https://home-manager-options.extranix.com/

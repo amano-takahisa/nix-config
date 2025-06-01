@@ -153,4 +153,10 @@
       experimental-features = ["nix-command" "flakes"];
     };
   };
+  nix.registry = {
+    nixpkgs = {
+      type = "channel";
+      value = "https://nixos.org/channels/nixos-unstable";
+    };
+  };
 }
